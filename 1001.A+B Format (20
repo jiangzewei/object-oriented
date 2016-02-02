@@ -1,1 +1,28 @@
 # object-oriented
+#include<stdio.h>
+int main()
+{
+  int a,b,sum,d,e,f,g,h;
+  scanf("%d %d",&a,&b);
+  sum=a+b;
+  if(sum<0)
+  {
+      sum=-sum;
+    printf("-");  
+  }
+  if(sum<1000)printf("%d\n",sum);
+  else if(sum>1000 && sum<1000000)
+        {
+          d=sum/1000;
+          e=sum%1000;
+          printf("%d,%03d",d,e);
+        }
+  else
+        {
+          f=sum/1000000;
+          g=(sum%1000000)/1000;
+          h=sum%1000;
+          printf("%d,%03d,%03d",f,g,h);
+        }
+  return 0;
+}
